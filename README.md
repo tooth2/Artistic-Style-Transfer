@@ -16,3 +16,9 @@ Main folder contains two notebooks. Both uses VGG-19 pre-trained model from GPU/
 These mobile platform requires lite-weight cpu-intensive model so that a pre-trained TensorFlow Lite model and its API are used. 
 * [Android style Transfer](/android/README.md)
 * [iOS Style Transfer](/ios/README.md)
+
+### reference 
+[Artistic-Style-Transfer](https://arxiv.org/abs/1508.06576)
+[Tensorflow Artistic-Style-Transfer](https://www.tensorflow.org/lite/models/style_transfer/overview)
+[Pytorch-Inception v3](https://pytorch.org/hub/pytorch_vision_inception_v3/)
+[Pytorch transfer learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
