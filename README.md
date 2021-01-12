@@ -1,4 +1,4 @@
-# Style-Transfer-Example
+# Artistic-Style-Transfer
 This example projects demonstrate the use of Style Transfer in python, iOS, Android mobile applications. 
 
 ## Artistic-Style-Transfer
