@@ -1,15 +1,19 @@
 # Artistic-Style-Transfer
-This example projects demonstrate the use of Style Transfer in python, iOS, Android mobile applications. 
+This project demonstrates the use of Style Transfer in python, iOS, Android mobile applications inspired by [Neural Style Transfer algorithm by Gatys et al.(2015)](https://arxiv.org/abs/1508.06576).
 
-## Artistic-Style-Transfer
-Artistic style transfer takes two input images: one representing "content" and one representing "style"
-, such as an artwork by a famous painter or a texture photo to resemble and blend them together 
-so the output image looks like the content image, but "painted" in the style of the style reference image.
+## Project Goal 
+- Implement the neural style transfer algorithm
+- Generate novel artistic images using algorithm
+
+## Background
+Neural Style Transfer (NST) uses a previously trained convolutional network, and builds on top of that. As seen below, it merges two images, namely, a "content" image (C) and a "style" image (S), such as an artwork by a famous painter or a texture photo to resemble and blend them together , in order to create a "generated" image (G). The generated image G combines the "content" of the image C with the "style" of image S. So the output image looks like the content image, but "painted" in the style of the style reference image.
 ![example](style_tx_cat.png)
 
 ### Structure 
-Main folder contains two notebooks. Both uses VGG-19 pre-trained model from GPU/PyTorch and GPU/Tensorflow. VGG-19 network architecture looks as follows: 
+As for pre-trained convolutional model, we use VGG-19, a 19-layer version of the VGG network. This model has already been trained on the very large ImageNet competition database, and thus has learned to recognize a variety of low level features (at the earlier layers) and high level features (at the deeper layers).
+VGG-19 network architecture looks as follows: 
 ![VGG-19](vgg19_convlayers.png)
+Main folder contains two notebooks: one implemented using GPU/PyTorch and the other implemented using GPU/Tensorflow. 
 * [PyTorch VGG-19 pretrained model based style transfer](Style_Transfer_PyTorch.ipynb)
 * [Tensorflow VGG-19 pretrained model based style transfer](Style_Transfer_Tensorflow.ipynb)
 <!-- TODO --> 
@@ -17,8 +21,25 @@ These mobile platform requires lite-weight cpu-intensive model so that a pre-tra
 * [Android style Transfer](/android/README.md)
 * [iOS Style Transfer](/ios/README.md)
 
+### Implementation Approach
+- Check Cuda and Allocate Device (PyTorch/Cuda) /Create an Interactive Session(Tensorflow) 
+- Load the content image
+- Load the style image
+- Process the content/style images 
+- Load the VGG16 model and un on Cuda / Tensorflow session
+- Train/Run Model on GPU:
+  - Run the content image through the VGG16 model and compute the content cost
+  - Run the style image through the VGG16 model and compute the style cost
+  - Compute the total cost
+  - Define the optimizer and the learning rate
+  - tensorflow case : Build the TensorFlow graph
+- Generate "combined" image
+
 ### reference 
-* [Artistic-Style-Transfer](https://arxiv.org/abs/1508.06576)
+The Neural Style Transfer algorithm was due to Gatys et al. (2015). 
+* Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, (2015) [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576)
+* Karen Simonyan and Andrew Zisserman (2015). Very deep convolutional networks for large-scale image recognition (https://arxiv.org/pdf/1409.1556.pdf)
+* TensorFlow Implementation of ["A Neural Algorithm of Artistic Style"](http://www.chioka.in/tensorflow-implementation-neural-algorithm-of-artistic-style)
+* Harish Narayanan, [Convolutional neural networks for artistic style transfer](https://harishnarayanan.org/writing/artistic-style-transfer/)
 * [Tensorflow Artistic-Style-Transfer](https://www.tensorflow.org/lite/models/style_transfer/overview)
-* [Pytorch-Inception v3](https://pytorch.org/hub/pytorch_vision_inception_v3/)
 * [Pytorch transfer learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
