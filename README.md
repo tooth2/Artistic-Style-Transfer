@@ -35,7 +35,7 @@ These mobile platform requires lite-weight cpu-intensive model so that a pre-tra
   - tensorflow case : Build the TensorFlow graph
 - Generate "combined" image
 
-### reference 
+### Reference 
 The Neural Style Transfer algorithm was due to Gatys et al. (2015). 
 * Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, (2015) [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576)
 * Karen Simonyan and Andrew Zisserman (2015). Very deep convolutional networks for large-scale image recognition (https://arxiv.org/pdf/1409.1556.pdf)
