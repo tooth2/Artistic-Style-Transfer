@@ -16,10 +16,11 @@ VGG-19 network architecture looks as follows:
 Main folder contains two notebooks: one implemented using GPU/PyTorch and the other implemented using GPU/Tensorflow. 
 * [PyTorch VGG-19 pretrained model based style transfer](Style_Transfer_PyTorch.ipynb)
 * [Tensorflow VGG-19 pretrained model based style transfer](Art%2BGeneration%2Bwith%2BNeural%2BStyle%2BTransfer%2B-%2Bv2.ipynb)
+    * [Pre-trianed VGG-model](/pretrained-model/imagenet-vgg-verydeep-19.mat)
 <!-- TODO --> 
 These mobile platform requires lite-weight cpu-intensive model so that a pre-trained TensorFlow Lite model and its API are used. 
 * [Android style Transfer](/android/README.md)
-* [iOS Style Transfer](/ios/README.md)
+* iOS Style Transfer
 
 ### Implementation Approach
 - Check Cuda and Allocate Device (PyTorch/Cuda) /Create an Interactive Session(Tensorflow) 
@@ -38,8 +39,9 @@ These mobile platform requires lite-weight cpu-intensive model so that a pre-tra
 ### Reference 
 The Neural Style Transfer algorithm was due to Gatys et al. (2015). 
 * Leon A. Gatys, Alexander S. Ecker, Matthias Bethge, (2015) [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576)
-* Karen Simonyan and Andrew Zisserman (2015). Very deep convolutional networks for large-scale image recognition (https://arxiv.org/pdf/1409.1556.pdf)
+* Karen Simonyan and Andrew Zisserman (2015). [Very deep convolutional networks for large-scale image recognition](https://arxiv.org/pdf/1409.1556.pdf)
 * TensorFlow Implementation of ["A Neural Algorithm of Artistic Style"](http://www.chioka.in/tensorflow-implementation-neural-algorithm-of-artistic-style)
 * Harish Narayanan, [Convolutional neural networks for artistic style transfer](https://harishnarayanan.org/writing/artistic-style-transfer/)
 * [Tensorflow Artistic-Style-Transfer](https://www.tensorflow.org/lite/models/style_transfer/overview)
 * [Pytorch transfer learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
+* [MatConvNet](http://www.vlfeat.org/matconvnet/pretrained/)
