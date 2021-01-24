@@ -15,7 +15,7 @@ VGG-19 network architecture looks as follows:
 ![VGG-19](vgg19_convlayers.png)
 Main folder contains two notebooks: one implemented using GPU/PyTorch and the other implemented using GPU/Tensorflow. 
 * [PyTorch VGG-19 pretrained model based style transfer](Style_Transfer_PyTorch.ipynb)
-* [Tensorflow VGG-19 pretrained model based style transfer](Style_Transfer_Tensorflow.ipynb)
+* [Tensorflow VGG-19 pretrained model based style transfer](Art%2BGeneration%2Bwith%2BNeural%2BStyle%2BTransfer%2B-%2Bv2.ipynb)
 <!-- TODO --> 
 These mobile platform requires lite-weight cpu-intensive model so that a pre-trained TensorFlow Lite model and its API are used. 
 * [Android style Transfer](/android/README.md)
